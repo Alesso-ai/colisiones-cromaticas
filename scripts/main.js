@@ -111,8 +111,8 @@ while (balls.length < 25) {
         random(0 + size, width - size),
         random(0 + size, height - size),
         // La velocidad y la dirección de X aleatorio entre 7 y -7
-        random(-7, 7),
-        random(-7, 7),
+        random(-5, 5),
+        random(-5, 5),
         randomRGB(),
         size
     );
