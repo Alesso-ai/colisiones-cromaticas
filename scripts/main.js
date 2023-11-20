@@ -24,6 +24,9 @@ const ctx = canvas.getContext('2d');
  }
 
 
+
+
+
  //Creamos un constructor para q recorra el eje X y el eje Y
  //Constructor por parametros
  class Ball {
@@ -35,6 +38,35 @@ const ctx = canvas.getContext('2d');
         this.velY = velY;
         this.color = color;
         this.size = size;
+    }
+
+    //Dibujar, llamando a ctx que es el obejto 2d, begin path dibuja una nueva ruta
+    draw(){
+        //Pixel donde nace la bola
+        ctx.beginPath()
+        //Color propio con el metodo q hicimos
+        ctx.fileStyle = this.color
+        //Damos posicion con x e y , damos tamaño con el PI, el 0 es el color
+        ctx.arc(thix.x, thix.y, this.size, 0, 2 * Math.PI)
+        
+    }
+    //Metodo para actualizar en cada instante donde este la BOLA
+    //Tiene 4 condiciones , 4 IFs
+    update(){
+        
+        //Llamamos al eje x y al tamaño de la pelota
+        //Verifica la posicion X de la bola mas su tamaño cuando supera el ancho del lienzo
+        if((thix.x + thix.size) >= width){
+            //Colision horizontal hacia el panel derecho
+            this.velX= -(Math.abs(thix.velX))
+        }
+
+         //
+         if((thix.x - thix.size) <= 0){
+            //Colision horizontal hacia el panel derecho
+            this.velX= -(Math.abs(thix.velX))
+        }
+
     }
 
  }
