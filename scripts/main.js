@@ -22,3 +22,19 @@ const ctx = canvas.getContext('2d');
  const randomRGB = () =>{
         return `rgb(${random(0, 255)},rgb(${random(0, 255)},rgb(${random(0, 255)})`
  }
+
+
+ //Creamos un constructor para q recorra el eje X y el eje Y
+ //Constructor por parametros
+ class Ball {
+
+    constructor( x, y, velX, velY, color , size ) {
+        this.x = y;
+        thix.y = y;
+        this.velX = velX;
+        this.velY = velY;
+        this.color = color;
+        this.size = size;
+    }
+
+ }
